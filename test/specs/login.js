@@ -2,13 +2,14 @@ import LoginPage from "../pageobjects/login.page.js";
 import { browser, expect } from "@wdio/globals";
 
 describe("My Login application", () => {
-  it("should login with valid credentials", async () => {
+  before(async () => {
     // Open the login page
     await LoginPage.open();
 
     // Perform login
     await LoginPage.login("admin@srmtech.com", "SRM@1234");
-
+  });
+  it("should login with valid credentials", async () => {
     // Wait for the success alert (toast message) to be displayed
     const successTextElement = await $("div[role='alert']");
     await successTextElement.waitForDisplayed({ timeout: 5000 });

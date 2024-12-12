@@ -14,7 +14,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run wdio.conf.js",
-    "Medbot":"npx wdio run wdio.conf.js --doctor",
+    "AdminApplicaton":"npx wdio run wdio.conf.js --admin",
     "GenerateReport":"allure generate allure-results --clean ; allure open"
     
   },
