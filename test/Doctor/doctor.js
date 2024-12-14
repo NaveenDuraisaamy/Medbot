@@ -140,6 +140,7 @@ describe("Doctor Dashboard Tests", () => {
     await browser.pause(2000);
 
     await browser.back();
-    await browser.pause(2000);
+    await browser.pause(3000);
+    await browser.close;
   });
 });

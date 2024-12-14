@@ -23,7 +23,7 @@ export const config = {
   suites: {
     admin: ["./test/Doctor/doctor.js"],
   },
-  specs: ["./test/Doctor/doctor.js"],
+  specs: ["./test/Elements/isSelected.js"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -53,6 +53,7 @@ export const config = {
   capabilities: [
     {
       browserName: "firefox",
+      maxInstances: 1,
     },
   ],
 
@@ -87,7 +88,7 @@ export const config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  // baseUrl: 'http://localhost:8080',
+  // baseUrl: "http://65.1.18.83:5173/login",
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
